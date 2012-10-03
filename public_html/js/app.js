@@ -285,48 +285,6 @@ $(document).ready(function() {
 		creationNode.find("#cnode-parent-id").val(parentNode.attr('uid'));
 		creationNode.find("#cnode-x").val(x);
 		creationNode.find("#cnode-y").val(y);
-
-		//tillUpdate = 0;
-		/*
-		$.ajax({
-			type: "POST",
-			url: "/reader/newNode",
-			data: { 'message[thread_id]': parentNode.attr('tid'), 
-					'message[parent_id]': parentNode.attr('uid'), 
-					'message[title]': creationNode.find('#cnode-title').attr('value'), 
-					'message[content]': creationNode.find('#cnode-content').val(),
-					'message[x]': x,
-					'message[y]': y }
-		}).done(function( msg ) {
-			if (msg == 'success')
-				creationNode.find('#cnode-content').val('');
-		});
-		/*
-		$.ajaxFileUpload({
-			url: '/reader/newNode', 
-			secureuri: false,
-			fileElementId: 'cnode-file',
-			dataType: 'json',
-			data: { thread_id: parentNode.attr('tid'), 
-					parent_id: parentNode.attr('uid'), 
-					title: creationNode.find('#cnode-title').attr('value'), 
-					content: creationNode.find('#cnode-content').val(),
-					x: x,
-					y: y },			
-			success: function (data, status) {
-				if(typeof(data.error) != 'undefined') {
-					data.error != '' ? alert(data.error) : alert(data.msg);
-				}
-			},
-			error: function (data, status, e)
-			{
-				alert(e);
-			}
-		});		
-		
-		cancelNode();
-		return false;
-		*/
 	}
 
 	function cancelNode() {
