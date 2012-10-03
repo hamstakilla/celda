@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+	/* 	just a prototype
+		needs refactoring */
+
 	var MAX_COLOR = 16777215;
 	var W = $(document).width();
 	var H = $(document).height();
