@@ -187,16 +187,15 @@ $(document).ready(function() {
 	creationNode.find("#cnode-form").ajaxForm({
 		url: "/reader/newNode",
 		type: "post",
-		resetForm: true,
-		clearForm: true,
+		//resetForm: true,
+		//clearForm: true,
 		success: function(responseText, statusText, xhr, $form) {
-			if (responseText == 'success')
-				cancelNode();
 			if (responseText == 'relocate') {
 				creationNode.addClass('denied');
 				moveCreation = true;
 				return false;
 			}
+			cancelNode();
 		},
 		beforeSubmit: function(arr, $form, options) { 
 		}
