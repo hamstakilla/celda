@@ -1,0 +1,206 @@
+* {
+	margin: 0px;
+	padding: 0px;	
+}
+
+body {
+	background-color: #333;
+	font-family: sans-serif;
+	font-size: 11px;
+	color: #fff;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+/* celda */
+
+.celda {
+	background-color: #333;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	display: block;
+	width: 100%;
+	height: 99999px;
+}
+
+.stat {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	z-index: 99999;
+	padding: 5px;
+	color: #555;
+}
+
+/* node */
+
+#node {
+	padding: 5px;
+	border: solid 1px #ddd;
+	display: inline-block;
+	position: absolute;
+	background-color: #333;
+	z-index: 10;
+	max-width: 200px;
+	max-height: 200px;
+	overflow: hidden;
+
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+
+#node.denied {
+	border: solid 1px #d00;
+}
+
+#node.extended {
+	z-index: 99999;
+	overflow: visible;
+	max-width: 2000px;
+	max-height: 2000px;	
+}
+
+#node.extended #content {
+	overflow: visible;
+	max-width: none;
+	max-height: none;
+}
+
+#node #content {
+	max-width: 180px;
+	max-height: 160px;
+	overflow: auto;
+
+    white-space: -moz-pre-wrap; /* Mozilla, supported since 1999 */
+    white-space: -pre-wrap; /* Opera */
+    white-space: -o-pre-wrap; /* Opera */
+    white-space: pre-wrap; /* CSS3 - Text module (Candidate Recommendation) http://www.w3.org/TR/css3-text/#white-space */
+    word-wrap: break-word; /* IE 5.5+ */	
+}
+
+#node .thumbnail {
+	display: inline;
+	margin-right: 5px;
+	margin-bottom: 5px;
+
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;	
+}
+
+#node:hover {
+	z-index: 99999;
+}
+
+#node #title {
+	text-decoration: underline;
+	margin-bottom: 5px;
+}
+
+#node #bottom {
+	height: 13px;
+	margin: 3px 0px 0px 0px;
+}
+
+#node #bottom #controls {
+	margin: 0px auto;
+	font-size: 10px;
+	text-align: center;
+}
+
+#node #controls a {
+	padding: 0px 3px;
+	color: #333;
+
+	background-color: #666;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+#node #controls a:hover {
+	background-color: #ddd;
+}
+
+#line {
+	z-index: 0; 
+	padding: 0px; 
+	margin: 0px; 
+	height: 2px; 
+	background-color: #ddd; 
+	line-height: 1px; 
+	position: absolute; 
+}
+
+/* creation node */
+
+#node.creation {
+	min-width: 183px;
+	max-width: none;
+	max-height: none;
+	opacity: .8;
+}
+
+#node textarea, #node input {
+	display: block;
+	margin-bottom: 5px;
+	color: #fff;
+	background-color: #333;
+	font-size: 12px;
+	border: 1px dashed #fff;
+	width: 130px;
+
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+#node #cnode-submit {
+	position: absolute;
+	visibility: hidden;
+	opacity: 0;
+	width: 0px;
+	height: 0px;
+}
+
+#node #cnode-file {
+	position: absolute;
+	visibility: hidden;
+	opacity: 0;
+	width: 0px;
+	height: 0px;
+}
+
+#node #cnode-file-click {
+	width: 35px;
+	height: 40px;
+	padding: 5px;
+	border: 1px dashed #fff;
+	text-align: center;
+	cursor: pointer;
+	word-wrap: break-word;
+	overflow: hidden;
+
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+#node #leftside {
+	position: absolute;
+	left: 5px;
+	top: 5px;
+	width: 50px;
+	height: 50px;
+}
+
+#node #rightside {
+	position: relative;
+	left: 50px;
+	width: 130px;
+}
